@@ -27,6 +27,7 @@ def index(request):
     
 def about(request):
     # No need to pass a context dictionary in about ().
+
     return render(request, 'rango/about.html')
 
 def show_category(request, category_name_slug):
@@ -80,7 +81,7 @@ def add_category(request):
             print(form.errors)
     # Will handle the bad form, new form, or no form supplied cases.
     # Render the form with error messages (if any).
-    return render(request, 'rango/add_category.html', {'form': form})
+    return render(request,'rango/add_category.html',{'form': form})
 
 
 def add_page(request, category_name_slug):
